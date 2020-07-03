@@ -6,5 +6,22 @@
 </head>
 <body>
 <h1>首页</h1>
+
+<div>
+    <b>订单号</b>
+    <i>{{orderId}}</i>
+</div>
+<div>
+    {{list}}
+</div>
+<p>{{list.1}}----{{list[2]}}</p>
+
+<p>{{dic.a}}----{{dic.name}}</p>
+
+{% for item in list %}
+<div>{{item}}</div>
+{% endfor%}
+
+
 </body>
 </html>
