@@ -200,7 +200,7 @@ new_test2 = test.replace('a','M',10)
 print(new_test2) # MbcsdfseeMMfsM
 
 ```
-2. split(str,num)
+2.2 split(str,num)
 - 参数： 分隔符str,分割次数num
 - 返回值为列表
 ```python
@@ -210,7 +210,7 @@ print(list1) # ['', 'bcsdfsee', '', 'fs', '']
 list2 = test.split('a',2)
 print(list2) # ['', 'bcsdfsee', 'afsa']
 ```
-3. join()
+2.3 join()
 
 - 使用连接符拼接列表
 
@@ -220,7 +220,7 @@ str3 = '-'.join(list1)
 print(str3) #$ aaa-bbb
 
 ```
-4.capitalize()
+2.4 capitalize()
 
 - 将字符串首字母大写
 ```python
@@ -228,7 +228,7 @@ str1 = 'test and test2'
 str2 = str1.capitalize()
 print(str2) # Test and test2
 ```
-5. title()
+2.5 title()
 
 - 将字符串中每个单词首字母大写
 ```python
@@ -236,16 +236,54 @@ str1 = 'test and test2'
 print(str1.title()) # Test And Test2
 ```
 
-6. upper()
+2.6 upper()
 - 所有字符大写
 ```python
 str1 = 'test and test2'
 print(str1.upper()) # TEST AND TEST2
 ```
-7.lower() 
+2.7 lower() 
 - 所有字符小写
 ```python
 str1 = 'test And test2'
 print(str1.lower())  # test and test2
 ```
+2.8 strip()
+- 删除首尾空格
+```python
+
+str1 = '     test and test2     '
+print(str1.strip()) # test and test2
+```
+2.9 ljust() 与 rjust() 与 center()
+- ljust(num,separator)  左对齐，指定字符串长度，不足在右侧填空指定分隔符
+- rjust(num,separator)  右对齐，指定字符串长度，不足在左侧填空指定分隔符
+- center(num,separator) 居中对齐，左右填充，不是绝对居中
+- 指定num小于字符串长度时，不做任何操作
+```python
+str1 = 'abcddf'
+str2 = str1.ljust(10,'-')
+print(str2) # abcddf----
+str3 = str1.rjust(10,'*')
+print(str3) # ****abcddf
+str4 = str1.center(10,'&')
+print(str4) # &&abcddf&&
+str5 = str1.ljust(3,'-')
+print(str5)  # abcddf
+```
+
+3. 判断是否包含
+
+3.1 startswith(str,begin,end) 与 endswith(str)
+- 判断字符串是否以str开头或结尾
+```python
+str1 = 'abcddf'
+print(str1.startswith('a')) # True
+print(str1.startswith('a',10,20)) # False
+print(str1.startswith('b',1,5)) # True
+print(str1.endswith('b')) # False
+```
+
+
+
 
